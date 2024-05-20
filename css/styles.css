@@ -1,8 +1,14 @@
-/* цвет основного текста SLATE: #434455; */
-/*заголовки NAVY BLUE: #2E2F42; */
-/* акцент Iris: #4D5AE5; */
-/* вторичный цвет фона CLOUD: #F4F4FD; */
-/* top line color CORNFLOWER: #E7E9FC; */
+/* When using scc normalize it is not nessessory */
+
+/* html {
+    box-sizing: border-box;
+}
+
+*,
+*::before, 
+*::after {
+    box-sizing: inherit;
+} */
 
 /* CSS variables */
 :root {
@@ -24,7 +30,31 @@ body {
     text-align: left;
 }
 
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    /* -- */
+    outline: 2px solid black;
+}
+
+/* 
+==button==
+width: Hug (169px)px;
+height: Hug (56px)px;
+top: 428px;
+left: 636px;
+padding: 16px 32px 16px 32px;
+gap: 10px;
+border-radius: 4px;
+opacity: 0px;
+*/
+
 .button {
+
     font-family: Roboto, sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -32,13 +62,23 @@ body {
     letter-spacing: 0.04em;
     text-align: center;
 
+    border-radius: 4px;
+    border: 1px solid transparent;
+
+    padding: 16px 32px 16px 32px;
+
+
+    /* width: Hug (169px)px;
+    height: Hug (56px)px; */
+    min-width: 169 px;
+
     cursor: pointer
 }
+
 
 .button.primary {
     color: var(--primery-white-color);
     background-color: var(--accent-color);
-    border: transparent;
 }
 
 .button.primary:hover,
@@ -47,26 +87,38 @@ button.primary:focus {
 }
 
 .button.secondary {
-    color: #4d5ae5;
+    color: var(--accent-color);
     background-color: #F4F4FD;
-    border: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 
 .button.secondary:hover,
-.button.secondary:focus{
+.button.secondary:focus {
     color: var(--primery-white-color);
     background-color: #404BBF;
 }
 
 /* Index.html */
 /*  Header */
+
+.container .nav {
+    display: flex;
+}
+
 .list {
     list-style: none;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 
-.link{
+.link {
     text-decoration: none;
+}
+
+.text {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .logo {
@@ -96,7 +148,39 @@ button.primary:focus {
 }
 
 /* Site nav */
+
+.site-nav {
+    display: flex;
+}
+
+.site-nav .item {
+    /* margin-right: 40px; */
+
+    /* -- */
+    outline: 1px dashed grey;
+    background-color: pink
+
+}
+
+/* чисткка геометрии */
+
+/* .site-nav .item:last-child {
+    margin-right: 0;
+} */
+
+/* .site-nav .item:not(:last-child) {
+    margin-right: 40px;
+} */
+
+/* К верхнему соседу */
+.site-nav .item +.item{
+    margin-left: 40px;
+}
+
 .site-nav .link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom:24px;
     color: var(--title-text-color);
 
     font-size: 16px;
@@ -113,9 +197,16 @@ button.primary:focus {
 /* Address */
 .address {
     font-style: normal;
+
+}
+
+.address .list {
+    display: flex;
 }
 
 .address .link {
+    /* display: block; */
+
     color: #434455;
 
     font-family: Roboto;
@@ -133,24 +224,40 @@ button.primary:focus {
     color: #404bbf;
 }
 
+.address .item +.item {
+    margin-left: 40px
+}
+
 /* Main */
-/* Hero */
+/* Hero 1 */
 .hero {
     background-color: var(--title-text-color);
+    text-align: center;
 }
 
 .hero-title {
+    margin-top: 0;
+    margin-bottom: 48;
     color: var(--primery-white-color);
 
     font-size: 56px;
     font-weight: 700;
     line-height: 1.07;
-    text-align: center;
 
-    letter-spacing: 0.02em
+    letter-spacing: 0.02em;
+    /* -- */
+    /* background-color: tomato; */
 }
 
 /* Sections */
+.section {
+    padding-top: 0px;
+    padding-bottom: 120px;
+    /* -- */
+    background-color: tomato;
+    outline: 2px dashed black;
+}
+
 .section-title {
     color: var(--title-text-color);
 
@@ -160,10 +267,13 @@ button.primary:focus {
     text-align: center;
     letter-spacing: 0.02em;
 
-    text-transform: capitalize
+    text-transform: capitalize;
+
+    margin-top: 0;
+    margin-bottom: 72;
 }
 
-/* Features */
+/* Features 2 */
 .features-list .title,
 .profile-list .title,
 .projects-list .title {
@@ -174,20 +284,26 @@ button.primary:focus {
     line-height: 1.2;
     letter-spacing: 0.02em;
     text-align: left;
+
+    margin-top: 0;
+    margin-bottom: 8;
 }
 
-/* Projects */
+/* Projects 3 */
 
-/* Profile */
-.profile {
+/* Profile 4 */
+.section.profile {
     background-color: #F4F4FD;
+    padding-top: 120px;
+    /* -- */
+    background-color: teal;
 }
 
-.profile-img{
+.profile-img {
     background-color: var(--primery-white-color);
 }
 
-.profile-item{
+.profile-item {
     background-color: var(--primery-white-color);
 }
 
