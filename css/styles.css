@@ -33,12 +33,13 @@ body {
 .container {
     margin-left: auto;
     margin-right: auto;
-    width: 1440px;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* width: 1440px; */
+    width: 1148px;
+    padding-left: 10px;
+    padding-right: 10px;
 
-    /* -- */
-    outline: 2px solid black;
+    /* ** */
+    background-color: teal;
 }
 
 /* 
@@ -70,7 +71,7 @@ opacity: 0px;
 
     /* width: Hug (169px)px;
     height: Hug (56px)px; */
-    min-width: 169 px;
+    min-width: 169px;
 
     cursor: pointer
 }
@@ -101,8 +102,14 @@ button.primary:focus {
 /* Index.html */
 /*  Header */
 
-.container .nav {
+.container.nav {
     display: flex;
+    align-items: center;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
 }
 
 .list {
@@ -132,11 +139,14 @@ button.primary:focus {
     text-align: left;
 
     text-transform: uppercase;
-    text-decoration: none
+    text-decoration: none;
+    margin-right: 76px;
 }
 
 .logo .link {
-    text-decoration: none
+    display: block;
+    text-decoration: none;
+    
 }
 
 .logo:hover {
@@ -153,14 +163,6 @@ button.primary:focus {
     display: flex;
 }
 
-.site-nav .item {
-    /* margin-right: 40px; */
-
-    /* -- */
-    outline: 1px dashed grey;
-    background-color: pink
-
-}
 
 /* чисткка геометрии */
 
@@ -197,11 +199,13 @@ button.primary:focus {
 /* Address */
 .address {
     font-style: normal;
+    margin-left: auto;
 
 }
 
 .address .list {
     display: flex;
+    
 }
 
 .address .link {
@@ -237,7 +241,7 @@ button.primary:focus {
 
 .hero-title {
     margin-top: 0;
-    margin-bottom: 48;
+    margin-bottom: 48px;
     color: var(--primery-white-color);
 
     font-size: 56px;
@@ -245,17 +249,12 @@ button.primary:focus {
     line-height: 1.07;
 
     letter-spacing: 0.02em;
-    /* -- */
-    /* background-color: tomato; */
 }
 
 /* Sections */
 .section {
     padding-top: 0px;
     padding-bottom: 120px;
-    /* -- */
-    background-color: tomato;
-    outline: 2px dashed black;
 }
 
 .section-title {
@@ -270,10 +269,45 @@ button.primary:focus {
     text-transform: capitalize;
 
     margin-top: 0;
-    margin-bottom: 72;
+    margin-bottom: 72px;
 }
 
 /* Features 2 */
+.features-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.features-list .item {
+    width:calc((100% - 72px) / 4);
+    margin-right: 24px;
+    margin-bottom: 24px;
+
+    /* ** */
+    background-color: pink;
+
+}
+
+/* for n element in the row */
+.features-list .item:nth-child(4n){
+    margin-right: 0;
+}
+
+/* alt */
+/* .features-list .item:not(:nth-child(4n)){
+    margin-right: 24px;
+} */
+
+/* for the last 4 elements in the container */
+.features-list .item:nth-last-child(-n +4){
+    margin-bottom: 0;
+}
+
+/* alt */
+/* .features-list .item:not(:nth-last-child(-n +4)){
+    margin-bottom: 24px;
+} */
+
 .features-list .title,
 .profile-list .title,
 .projects-list .title {
@@ -286,7 +320,7 @@ button.primary:focus {
     text-align: left;
 
     margin-top: 0;
-    margin-bottom: 8;
+    margin-bottom: 8px;
 }
 
 /* Projects 3 */
@@ -295,8 +329,6 @@ button.primary:focus {
 .section.profile {
     background-color: #F4F4FD;
     padding-top: 120px;
-    /* -- */
-    background-color: teal;
 }
 
 .profile-img {
