@@ -446,14 +446,18 @@ button.primary:focus {
 .footer .content {
     width: 264px;
     margin-right: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .footer-text {
     color: #F4F4FD;
-
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .footer .logo {
+    display: inline-block;
     margin-bottom: 16px;
 }
 
