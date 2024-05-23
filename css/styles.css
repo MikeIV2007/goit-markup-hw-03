@@ -34,7 +34,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     /* width: 1440px; */
-    width: 1148px;
+    /* width: 1148px; */
+    width: 1158px;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -98,6 +99,10 @@ button.primary:focus {
 
 /* Index.html */
 /*  Header */
+
+header {
+    border-bottom: 1px solid #E7E9FC
+}
 
 .container.nav {
     display: flex;
@@ -412,6 +417,7 @@ button.primary:focus {
 
 .portfolio-list .item {
     margin: 24px 12px;
+    border: 1px solid #E7E9FC;
 }
 
 .portfolio-list .content {
